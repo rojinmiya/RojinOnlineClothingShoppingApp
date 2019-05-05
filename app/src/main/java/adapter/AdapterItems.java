@@ -27,7 +27,7 @@ public class AdapterItems extends RecyclerView.Adapter<AdapterItems.ItemViewHold
     }
     public class ItemViewHolder extends RecyclerView.ViewHolder {
         CircleImageView imgview;
-        TextView itemname, itemprice, itemdescription;
+        TextView itemname, itemprice, itemdescription, itemimagename;
 
         public ItemViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -36,6 +36,7 @@ public class AdapterItems extends RecyclerView.Adapter<AdapterItems.ItemViewHold
             itemname = itemView.findViewById(R.id.tvName);
             itemprice = itemView.findViewById(R.id.tvPrice);
             itemdescription = itemView.findViewById(R.id.tvDescription);
+            itemimagename = itemView.findViewById(R.id.tvImagename);
         }
 
 
@@ -56,6 +57,7 @@ public class AdapterItems extends RecyclerView.Adapter<AdapterItems.ItemViewHold
         itemViewHolder.itemname.setText(itemProperties.getItemName());
         itemViewHolder.itemprice.setText(itemProperties.getItemPrice());
         itemViewHolder.itemdescription.setText(itemProperties.getItemDescription());
+        itemViewHolder.itemimagename.setText(itemProperties.getImageName());
 
         itemViewHolder.imgview.setOnClickListener(new View.OnClickListener() {
             @Override

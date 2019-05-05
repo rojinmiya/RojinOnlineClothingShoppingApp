@@ -20,7 +20,8 @@
         android:text="Add Item"
         android:layout_gravity="center"
         android:textColor="#fff"
-        android:textSize="35dp" />
+        android:textSize="35dp"
+        />
 
 
     <LinearLayout
@@ -41,7 +42,7 @@
             android:fontFamily="Montserrat"
             android:textColorHint="#fff"
             android:hint="Enter Item Name"
-
+            android:inputType="text"
             android:textSize="25dp" />
 
         <EditText
@@ -50,7 +51,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="Montserrat"
             android:hint="Enter item price"
-            android:inputType="text"
+            android:inputType="number"
             android:textColorHint="#fff"
             android:textSize="25dp" />
 
