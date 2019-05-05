@@ -1,5 +1,6 @@
 package com.rojinonlineclothingshoppingapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -37,12 +38,17 @@ public class RojinAddItemActivity extends AppCompatActivity {
     private void Save(){
 
         try {
-            PrintStream printStream=new PrintStream(openFileOutput("words.txt",MODE_PRIVATE | MODE_APPEND));
-            printStream.println(etName.getText().toString());
-            printStream.println(etPrice.getText().toString());
-            printStream.println(etImageName.getText().toString());
-            printStream.println(etDescription.getText().toString());
+            PrintStream printStream=new PrintStream(openFileOutput("items.txt",MODE_PRIVATE | MODE_APPEND));
+            printStream.println(etName.getText().toString() + "->" + etPrice.getText().toString()
+                    + "->" + etImageName.getText().toString() + "->" + etDescription.getText().toString());
             Toast.makeText(this,"Saved to"+getFilesDir(),Toast.LENGTH_SHORT).show();
+            etName.setText("");
+            etPrice.setText("");
+            etImageName.setText("");
+            etDescription.setText("");
+
+            startActivity(new Intent(getApplicationContext(), Dashboard.class));
+
         } catch (FileNotFoundException e) {
             Log.d("RojinOnlineClothingapp","Error"+e.toString());
             e.printStackTrace();

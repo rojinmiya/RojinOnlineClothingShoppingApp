@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RojinAddItemActivity"></activity>
+        <activity android:name=".ItemsDetailActivity"></activity>
+        <activity android:name=".RojinAddItemActivity" />
         <activity android:name=".Dashboard" />
         <activity android:name=".MainActivity">
             <intent-filter>

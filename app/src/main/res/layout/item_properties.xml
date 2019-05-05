@@ -4,7 +4,7 @@
     android:layout_margin="20dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imgProfile"
+        android:id="@+id/imgview"
         android:layout_width="100dp"
         android:layout_height="100dp"
 
@@ -13,20 +13,39 @@
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_toEndOf="@+id/imgProfile"
+
+        android:layout_toEndOf="@+id/imgview"
         android:hint="Item Name"
         android:textSize="20sp"/>
+
     <TextView
-        android:id="@+id/tvPhone"
+        android:id="@+id/tvDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+
         android:layout_below="@+id/tvName"
-        android:layout_toEndOf="@+id/imgProfile"
+        android:layout_toEndOf="@+id/imgview"
+        android:hint="Item Description"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/tvDescription"
+        android:layout_toEndOf="@+id/imgview"
         android:hint="Item Price"
         android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvImagename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_below="@+id/tvPrice"
+        android:layout_toEndOf="@+id/imgview"
+        android:hint="Image Name"
+        android:textSize="20sp"/>
+
+
+
 
 </RelativeLayout>
